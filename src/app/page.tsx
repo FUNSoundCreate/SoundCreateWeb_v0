@@ -1,5 +1,10 @@
-import Image from "next/image";
+import Header from "@/components/header";
 
 export default function Home() {
-  return ;
+  return (
+    <div className ="min-h-screen bg-white">
+      <Header />
+      <main></main>
+    </div>
+  );
 }

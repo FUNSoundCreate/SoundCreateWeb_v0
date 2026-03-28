@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/onf8vca.css");
 @import "tailwindcss";
 
 :root {
@@ -10,6 +11,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-helvetica-lt-pro: "helvetica-lt-pro", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
