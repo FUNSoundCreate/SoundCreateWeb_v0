@@ -13,6 +13,7 @@ export default function Home() {
           slogan="公立はこだて未来大学DTMサークル"
           description="SoundCreateは主に公立はこだて未来大学の学生によって運営される大学公認のDTMサークルです。サークル内でコンピレーションを開催、アルバムをリリースするなどの活動を行っています。"
           layout="image-left"
+          priority
         />
         <ContentsMenu
           imageSrc="/IMG_0261.JPG"
