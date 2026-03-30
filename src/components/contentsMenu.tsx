@@ -10,6 +10,7 @@ type ContentsMenuProps = {
   layout?: "image-left" | "image-right";
   buttonLabel?: string;
   buttonHref?: string;
+  priority?: boolean;
 };
 
 export default function ContentsMenu({
@@ -21,6 +22,7 @@ export default function ContentsMenu({
   layout = "image-left",
   buttonLabel,
   buttonHref,
+  priority = false,
 }: ContentsMenuProps) {
   const isImageLeft = layout === "image-left";
 
@@ -57,6 +59,8 @@ export default function ContentsMenu({
             src={imageSrc}
             alt={imageAlt}
             fill
+            priority={priority}
+            sizes="(min-width: 640px) 50vw, 100vw"
             className="object-cover"
           />
         </div>
