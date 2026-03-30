@@ -15,12 +15,6 @@ export default function Support() {
 
   return (
     <div className="flex-col">
-      <p className="text-[25px] text-center font-bold font-helvetica-lt-pro text-violet-600 pt-32">
-        Support
-      </p>
-      <h1 className="text-[41px] text-center font-bold font-noto-sans-jp text-black">
-        参加申し込み・問い合わせ
-      </h1>
       <div className="flex items-center gap-40 max-w-6xl mx-auto flex-row py-16">
         <div className="bg-violet-600 w-1/2 h-auto">
           <div className="flex items-start px-12 py-8 gap-0.5 flex-col">

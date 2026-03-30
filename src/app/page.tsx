@@ -1,6 +1,8 @@
 import Header from "@/components/header";
 import ContentsMenu from "@/components/contentsMenu";
+import Title from "@/components/title";
 import Support from "@/components/support";
+import LinkIcon from "@/components/linkicon";
 
 export default function Home() {
   return (
@@ -36,7 +38,22 @@ export default function Home() {
           buttonLabel="Check Releases"
           buttonHref="/release"
         />
+        <Title 
+          subtitle="Support"
+          title="参加申し込み・問い合わせ"
+        />
         <Support />
+        <Title 
+          subtitle="Partner"
+          title="パートナーシップ"
+        />
+        <div className="flex items-center gap-8 py-16 flex-row justify-center">
+          <LinkIcon 
+            href="https://x.com/FUNDJCircle"
+            imgsrc="/djlogosmbk.png"
+            alt="FUNDJCircle"
+          />
+        </div>
       </main>
     </div>
   );
