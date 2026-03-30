@@ -1,0 +1,64 @@
+import Image from "next/image";
+import Link from "next/link";
+
+type ContentsMenuProps = {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  slogan: string;
+  description: string;
+  layout?: "image-left" | "image-right";
+  buttonLabel?: string;
+  buttonHref?: string;
+};
+
+export default function ContentsMenu({
+  imageSrc,
+  imageAlt,
+  title,
+  slogan,
+  description,
+  layout = "image-left",
+  buttonLabel,
+  buttonHref,
+}: ContentsMenuProps) {
+  const isImageLeft = layout === "image-left";
+
+  return (
+    <div
+      className={`flex items-center gap-20 max-w-6xl mx-auto py-8 px-4 ${
+        isImageLeft ? "flex-row" : "flex-row-reverse"
+      }`}
+    >
+      <div className="relative flex-1 aspect-377/233 overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      <div className="flex-1 flex flex-col gap-4">
+        <p className="text-4 font-bold font-helvetica-lt-pro text-violet-600">{title}</p>
+        <p className="text-4xl text-black font-bold font-helvetica-lt-pro">{slogan}</p>
+        <p className="text-base font-noto-sans-jp text-black leading-relaxed">{description}</p>
+        {buttonHref && (
+          <Link
+            href={buttonHref}
+            className="inline-flex items-center self-start px-4 py-2 bg-violet-600 text-base font-helvetica-lt-pro text-white font-bold"
+          >
+            {buttonLabel}
+            <Image
+              src="/uparrow.svg"
+              alt=""
+              width={14}
+              height={14}
+              className="ml-2"
+            />
+          </Link>
+        )}
+      </div>
+    </div>
+  );
+}
