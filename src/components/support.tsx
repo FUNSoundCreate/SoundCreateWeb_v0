@@ -15,8 +15,8 @@ export default function Support() {
 
   return (
     <div className="flex-col">
-      <div className="flex items-center gap-40 max-w-6xl mx-auto flex-row py-16">
-        <div className="bg-violet-600 w-1/2 h-auto">
+      <div className="flex items-center justify-between gap-10 lg:gap-40 max-w-6xl mx-auto flex-col lg:flex-row py-16">
+        <div className="bg-violet-600 w-[80%] lg:w-1/2 h-auto gap-8">
           <div className="flex items-start px-12 py-8 gap-0.5 flex-col">
             <p className="text-[16px] text-white font-bold font-helvetica-lt-pro">
               Join Us
@@ -42,7 +42,7 @@ export default function Support() {
             </Link>
           </div>
         </div>
-        <div className="bg-gray-200 w-1/2 h-auto">
+        <div className="bg-gray-200 w-[80%] lg:w-1/2 h-auto gap-8">
           <div className="flex items-start px-12 py-8 gap-0.5 flex-col">
             <p className="text-[16px] text-black font-bold font-helvetica-lt-pro">
               Contact Us
