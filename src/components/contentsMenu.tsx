@@ -26,20 +26,11 @@ export default function ContentsMenu({
 
   return (
     <div
-      className={`flex items-center gap-20 max-w-6xl mx-auto py-8 px-4 ${
-        isImageLeft ? "flex-row" : "flex-row-reverse"
+      className={`flex items-center gap-8 max-w-6xl mx-auto py-8 px-4 flex-col ${
+        isImageLeft ? "sm:flex-row-reverse sm:gap-20" : "sm:flex-row sm:gap-20"
       }`}
     >
-      <div className="relative flex-1 aspect-377/233 overflow-hidden">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          className="object-cover"
-        />
-      </div>
-
-      <div className="flex-1 flex flex-col gap-4">
+      <div className="w-full sm:flex-1 flex flex-col gap-4 px-4 sm:px-0">
         <p className="text-4 font-bold font-helvetica-lt-pro text-violet-600">{title}</p>
         <p className="text-4xl text-black font-bold font-helvetica-lt-pro">{slogan}</p>
         <p className="text-base font-noto-sans-jp text-black leading-relaxed">{description}</p>
@@ -58,6 +49,17 @@ export default function ContentsMenu({
             />
           </Link>
         )}
+      </div>
+
+      <div className="relative w-full sm:flex-1 px-4 sm:px-0">
+        <div className="relative aspect-377/233 overflow-hidden">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
     </div>
   );

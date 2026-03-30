@@ -8,7 +8,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="relative">
+    <header className="relative px-4 sm:px-0">
       <div className="flex items-center justify-between max-w-6xl mx-auto py-4 px-4">
         <Link
           href="/"
@@ -31,7 +31,7 @@ export default function Header() {
 
         {/* Hamburger button */}
         <button
-          className="md:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8"
+          className="md:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8 px-4"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
           aria-expanded={isOpen}
