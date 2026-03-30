@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import ContentsMenu from "@/components/contentsMenu";
+import Support from "@/components/support";
 
 export default function Home() {
   return (
@@ -7,17 +8,17 @@ export default function Home() {
       <Header />
       <main>
         <ContentsMenu
-          imageSrc="/IMG_0261.JPG"
-          imageAlt="未来祭での頒布"
+          imageSrc="/IMG_0375.jpg"
+          imageAlt="Ableton_Live_Gamen"
           title="About"
-          slogan="公立はこだて未来大学DTMサークル"
+          slogan="公立はこだて未来大学公認DTMサークル"
           description="SoundCreateは主に公立はこだて未来大学の学生によって運営される大学公認のDTMサークルです。サークル内でコンピレーションを開催、アルバムをリリースするなどの活動を行っています。"
           layout="image-left"
           priority
         />
         <ContentsMenu
-          imageSrc="/IMG_0261.JPG"
-          imageAlt="未来祭での頒布"
+          imageSrc="/lunocakeyplaying.jpg"
+          imageAlt="lunoca_playing_keyboard"
           title="Member"
           slogan="サークルを作り上げるコンポーザーたち"
           description="SoundCreateには多種多様な音楽性をもつ学生コンポーザーが集まり、ひとつのアルバム作品を作り上げています。また、すでに大学を卒業したOBメンバーや他大学からのインカレメンバーもサークル内で活躍しています。"
@@ -35,6 +36,7 @@ export default function Home() {
           buttonLabel="Check Releases"
           buttonHref="/release"
         />
+        <Support />
       </main>
     </div>
   );

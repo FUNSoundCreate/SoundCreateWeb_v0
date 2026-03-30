@@ -32,14 +32,14 @@ export default function ContentsMenu({
         isImageLeft ? "sm:flex-row-reverse sm:gap-20" : "sm:flex-row sm:gap-20"
       }`}
     >
-      <div className="w-full sm:flex-1 flex flex-col gap-4 px-4 sm:px-0">
-        <p className="text-4 font-bold font-helvetica-lt-pro text-violet-600">{title}</p>
-        <p className="text-4xl text-black font-bold font-helvetica-lt-pro">{slogan}</p>
-        <p className="text-base font-noto-sans-jp text-black leading-relaxed">{description}</p>
+      <div className="w-full sm:flex-1 flex flex-col gap-2 px-4 sm:px-0">
+        <p className="text-[16px] font-bold font-helvetica-lt-pro text-violet-600">{title}</p>
+        <p className="text-[41px] text-black font-bold font-helvetica-lt-pro">{slogan}</p>
+        <p className="text-[16px] font-noto-sans-jp text-black leading-relaxed">{description}</p>
         {buttonHref && (
           <Link
             href={buttonHref}
-            className="inline-flex items-center self-start px-4 py-2 bg-violet-600 text-base font-helvetica-lt-pro text-white font-bold"
+            className="inline-flex items-center self-start px-4 py-2 bg-violet-600 text-[16px] font-helvetica-lt-pro text-white font-bold"
           >
             {buttonLabel}
             <Image
