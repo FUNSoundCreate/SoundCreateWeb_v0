@@ -26,8 +26,8 @@ export default function Footer() {
           SoundCreate
         </Link>
         <nav className="flex flex-col text-white font-helvetica-lt-pro font-bold gap-4 sm:ml-auto sm:pr-8 lg:pr-16 py-4 sm:py-0">
-          <Link href="/member">Member</Link>
-          <Link href="/release">Release</Link>
+          <Link href="/members">Member</Link>
+          <Link href="/releases">Release</Link>
         </nav>
         <div className="flex flex-col text-white font-helvetica-lt-pro font-bold gap-4 sm:pl-8 lg:pl-16 py-4 sm:py-0">
           <Link href="https://x.com/SoundCreateFUN/">X(Twitter)</Link>

@@ -28,7 +28,7 @@ export default function Support() {
               SoundCreateへの加入申請はこちら
             </p>
             <Link
-              href="/entryform"
+              href="https://forms.gle/MTh8fbC2QEDycEbs6"
               className="inline-flex items-center self-start px-4 py-2 bg-white text-[16px] font-helvetica-lt-pro text-violet-600 font-bold"
             >
               Apply

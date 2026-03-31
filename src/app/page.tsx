@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import Hero from "@/components/hero";
 import ContentsMenu from "@/components/contentsMenu";
 import Title from "@/components/title";
 import Support from "@/components/support";
@@ -10,6 +11,9 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
+        <div className="py-4">
+          <Hero />
+        </div>
         <ContentsMenu
           imageSrc="/IMG_0375.jpg"
           imageAlt="Ableton_Live_Gamen"
@@ -27,7 +31,7 @@ export default function Home() {
           description="SoundCreateには多種多様な音楽性をもつ学生コンポーザーが集まり、ひとつのアルバム作品を作り上げています。また、すでに大学を卒業したOBメンバーや他大学からのインカレメンバーもサークル内で活躍しています。"
           layout="image-right"
           buttonLabel="Check Members"
-          buttonHref="/member"
+          buttonHref="/members"
         />
         <ContentsMenu
           imageSrc="/IMG_0261.JPG"
@@ -37,19 +41,13 @@ export default function Home() {
           description="サークル内では大学祭、全国的な同人即売会であるコミックマーケットやM3などに合わせて、コンピレーションが開催されます。コンピレーションの応募楽曲を収録したアルバムを、これらの即売会にてリリース、頒布しています。"
           layout="image-left"
           buttonLabel="Check Releases"
-          buttonHref="/release"
+          buttonHref="/releases"
         />
-        <Title 
-          subtitle="Support"
-          title="参加申し込み・問い合わせ"
-        />
+        <Title subtitle="Support" title="参加申し込み・問い合わせ" />
         <Support />
-        <Title 
-          subtitle="Partner"
-          title="パートナーシップ"
-        />
+        <Title subtitle="Partner" title="パートナーシップ" />
         <div className="flex items-center gap-8 py-16 flex-row justify-center">
-          <LinkIcon 
+          <LinkIcon
             href="https://x.com/FUNDJCircle"
             imgsrc="/djlogosmbk.png"
             alt="FUNDJCircle"
