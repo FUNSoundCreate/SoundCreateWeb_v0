@@ -8,7 +8,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="relative px-4 sm:px-0">
+    <header className="sticky top-0 z-50 bg-white px-4 sm:px-0">
       <div className="flex items-center justify-between max-w-6xl mx-auto py-4 px-4">
         <Link
           href="/"
