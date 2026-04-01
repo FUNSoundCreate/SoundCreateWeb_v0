@@ -26,7 +26,7 @@ export default function Header() {
         {/* Desktop nav */}
         <nav className="hidden md:flex gap-12 text-black font-helvetica-lt-pro font-bold">
           <Link href="/members">Member</Link>
-          <Link href="/releases">Release</Link>
+          <Link href="/release">Release</Link>
         </nav>
 
         {/* Hamburger button */}

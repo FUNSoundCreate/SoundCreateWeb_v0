@@ -48,7 +48,7 @@ export default function Home() {
             description="サークル内では大学祭、全国的な同人即売会であるコミックマーケットやM3などに合わせて、コンピレーションが開催されます。コンピレーションの応募楽曲を収録したアルバムを、これらの即売会にてリリース、頒布しています。"
             layout="image-left"
             buttonLabel="Check Releases"
-            buttonHref="/releases"
+            buttonHref="/release"
           />
         </ScrollReveal>
         <ScrollReveal>
