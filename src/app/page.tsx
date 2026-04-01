@@ -5,6 +5,7 @@ import Title from "@/components/title";
 import Support from "@/components/support";
 import LinkIcon from "@/components/linkicon";
 import Footer from "@/components/footer";
+import ScrollReveal from "@/components/scroll-reveal";
 
 export default function Home() {
   return (
@@ -14,45 +15,59 @@ export default function Home() {
         <div className="py-4">
           <Hero />
         </div>
-        <ContentsMenu
-          imageSrc="/IMG_0375.jpg"
-          imageAlt="Ableton_Live_Gamen"
-          title="About"
-          slogan="公立はこだて未来大学公認DTMサークル"
-          description="SoundCreateは主に公立はこだて未来大学の学生によって運営される大学公認のDTMサークルです。サークル内でコンピレーションを開催、アルバムをリリースするなどの活動を行っています。"
-          layout="image-left"
-          priority
-        />
-        <ContentsMenu
-          imageSrc="/lunocakeyplaying.jpg"
-          imageAlt="lunoca_playing_keyboard"
-          title="Member"
-          slogan="サークルを作り上げるコンポーザーたち"
-          description="SoundCreateには多種多様な音楽性をもつ学生コンポーザーが集まり、ひとつのアルバム作品を作り上げています。また、すでに大学を卒業したOBメンバーや他大学からのインカレメンバーもサークル内で活躍しています。"
-          layout="image-right"
-          buttonLabel="Check Members"
-          buttonHref="/members"
-        />
-        <ContentsMenu
-          imageSrc="/IMG_0261.JPG"
-          imageAlt="未来祭での頒布"
-          title="Release"
-          slogan="メンバー制作楽曲を募るコンピレーションアルバム"
-          description="サークル内では大学祭、全国的な同人即売会であるコミックマーケットやM3などに合わせて、コンピレーションが開催されます。コンピレーションの応募楽曲を収録したアルバムを、これらの即売会にてリリース、頒布しています。"
-          layout="image-left"
-          buttonLabel="Check Releases"
-          buttonHref="/releases"
-        />
-        <Title subtitle="Support" title="参加申し込み・問い合わせ" />
-        <Support />
-        <Title subtitle="Partner" title="パートナーシップ" />
-        <div className="flex items-center gap-8 py-16 flex-row justify-center">
-          <LinkIcon
-            href="https://x.com/FUNDJCircle"
-            imgsrc="/djlogosmbk.png"
-            alt="FUNDJCircle"
+        <ScrollReveal>
+          <ContentsMenu
+            imageSrc="/IMG_0375.jpg"
+            imageAlt="Ableton_Live_Gamen"
+            title="About"
+            slogan="公立はこだて未来大学公認DTMサークル"
+            description="SoundCreateは主に公立はこだて未来大学の学生によって運営される大学公認のDTMサークルです。サークル内でコンピレーションを開催、アルバムをリリースするなどの活動を行っています。"
+            layout="image-left"
+            priority
           />
-        </div>
+        </ScrollReveal>
+        <ScrollReveal>
+          <ContentsMenu
+            imageSrc="/lunocakeyplaying.jpg"
+            imageAlt="lunoca_playing_keyboard"
+            title="Member"
+            slogan="サークルを作り上げるコンポーザーたち"
+            description="SoundCreateには多種多様な音楽性をもつ学生コンポーザーが集まり、ひとつのアルバム作品を作り上げています。また、すでに大学を卒業したOBメンバーや他大学からのインカレメンバーもサークル内で活躍しています。"
+            layout="image-right"
+            buttonLabel="Check Members"
+            buttonHref="/members"
+          />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ContentsMenu
+            imageSrc="/IMG_0261.JPG"
+            imageAlt="未来祭での頒布"
+            title="Release"
+            slogan="メンバー制作楽曲を募るコンピレーションアルバム"
+            description="サークル内では大学祭、全国的な同人即売会であるコミックマーケットやM3などに合わせて、コンピレーションが開催されます。コンピレーションの応募楽曲を収録したアルバムを、これらの即売会にてリリース、頒布しています。"
+            layout="image-left"
+            buttonLabel="Check Releases"
+            buttonHref="/releases"
+          />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Title subtitle="Support" title="参加申し込み・問い合わせ" />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Support />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Title subtitle="Partner" title="パートナーシップ" />
+        </ScrollReveal>
+        <ScrollReveal>
+          <div className="flex items-center gap-8 py-16 flex-row justify-center">
+            <LinkIcon
+              href="https://x.com/FUNDJCircle"
+              imgsrc="/djlogosmbk.png"
+              alt="FUNDJCircle"
+            />
+          </div>
+        </ScrollReveal>
       </main>
       <Footer />
     </div>

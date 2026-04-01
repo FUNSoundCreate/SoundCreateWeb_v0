@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "motion/react";
 
 const IMAGE_SRC = "/lepidos_vol.2_jacket.png";
 
@@ -26,7 +28,12 @@ const VIEW_W = OFFSETS[2] + SHAPE_RIGHT;
 
 export default function Mask() {
   return (
-    <div className="relative w-full h-full">
+    <motion.div
+      className="relative w-full h-full"
+      initial={{ opacity: 0, x: -80 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+    >
       <svg
         viewBox={`0 0 ${VIEW_W} ${VIEW_H}`}
         className="w-auto h-full"
@@ -55,6 +62,6 @@ export default function Mask() {
           />
         ))}
       </svg>
-    </div>
+    </motion.div>
   );
 }
