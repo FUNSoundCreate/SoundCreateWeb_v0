@@ -12,7 +12,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <div className="py-4">
+        <div className="pt-4 pb-32">
           <Hero />
         </div>
         <ScrollReveal>

@@ -28,7 +28,7 @@ export default function ContentsMenu({
 
   return (
     <div
-      className={`flex items-center gap-8 max-w-6xl mx-auto py-24 px-4 flex-col ${
+      className={`flex items-center gap-8 max-w-6xl mx-auto py-16 px-4 flex-col ${
         isImageLeft ? "sm:flex-row-reverse sm:gap-20" : "sm:flex-row sm:gap-20"
       }`}
     >
