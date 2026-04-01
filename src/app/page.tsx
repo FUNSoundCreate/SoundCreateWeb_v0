@@ -6,13 +6,14 @@ import Support from "@/components/support";
 import LinkIcon from "@/components/linkicon";
 import Footer from "@/components/footer";
 import ScrollReveal from "@/components/scroll-reveal";
+import News from "@/components/news";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <div className="pt-4 pb-32">
+        <div className="pt-4 pb-48">
           <Hero />
         </div>
         <ScrollReveal>
@@ -49,6 +50,12 @@ export default function Home() {
             buttonLabel="Check Releases"
             buttonHref="/releases"
           />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Title subtitle="News" title="最新情報" />
+        </ScrollReveal>
+        <ScrollReveal>
+          <News />
         </ScrollReveal>
         <ScrollReveal>
           <Title subtitle="Support" title="参加申し込み・問い合わせ" />
