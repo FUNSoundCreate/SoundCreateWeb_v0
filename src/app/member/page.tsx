@@ -37,6 +37,16 @@ export default function MemberPage() {
         />
       </ScrollReveal>
       <ScrollReveal>
+        <Member
+          imageSrc="/members/paleclip.jpg"
+          name="paleclip"
+          role="会計 / トラックメーカー / B1"
+          comment="会計です。前はHash87という名前でした。EDMはGeometry Dashで出会いました。使用しているDAWはFLStudioです。ハウスからベースミュージックまで全て好きです。C++でプラグインを作っています。"
+          FavGenre="Progressive House, Future Bounce, Melodic Dubstep, Digicoreなど"
+          soundcloudUrl="https://soundcloud.com/paleclip"
+        />
+      </ScrollReveal>
+      <ScrollReveal>
         <Member 
           imageSrc="/members/oruto.webp"
           name="OrutO"
@@ -46,6 +56,27 @@ export default function MemberPage() {
           xUrl="https://twitter.com/oruto_key"
           soundcloudUrl="https://on.soundcloud.com/gf63EMjpMY2joxvvYx"
       />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Member
+          imageSrc="/members/inv.png"
+          name="侵略者"
+          role="トラックメーカー / B4"
+          comment="DJ/Trackmaker  デカ音屋さん  西城樹里のヲタクから二郎巡りまで、活動の幅は多岐にわたる"
+          FavGenre="rawstyle, uptempo, otogecore, bailefunk, drum'n'bass, speedcore, noise"
+          xUrl="https://on.soundcloud.com/DTcrWRstMySuI0b9Pm"
+          soundcloudUrl="https://x.com/gomieshizumu"
+        />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Member
+          imageSrc="/members/lunoca.jpg"
+          name="Lunoca"
+          role="トラックメーカー / OB"
+          comment="Kawaii Emotional Music"
+          FavGenre="Future, Hyper, Jersey Club, Complextro, etc."
+          soundcloudUrl="https://soundcloud.com/lunoca"
+        />
       </ScrollReveal>
       <Footer />
     </div>
