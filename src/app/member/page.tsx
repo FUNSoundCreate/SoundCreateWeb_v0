@@ -29,7 +29,7 @@ export default function MemberPage() {
         <Member
           imageSrc="/members/onnenai.jpg"
           name="Onnenai"
-          role="副代表 / トラックメーカー / エンジニア / B3"
+          role="副代表 / トラックメーカー / エンジニア / B2"
           comment="副代表です。Kawaii Future Bassから電子音楽にハマり、Futureなジャンルの音楽を中心に制作しています。DJサークルでDJもしています。合成音声も好きで初音ミクを中心に複数の音声ライブラリを揃えています。今年はたくさん使ってあげたいです。"
           FavGenre="Kawaii Future Bass, Electro Pop, Vocaloid Electro, Botanicaなど"
           xUrl="https://twitter.com/onnenai_w57"
