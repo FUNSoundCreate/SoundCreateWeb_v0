@@ -19,7 +19,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "SoundCreate",
+  title: "SoundCreate Official",
   description: 'DTM Circle "SoundCreate" at Future University Hakodate',
 };
 
