@@ -47,6 +47,16 @@ export default function MemberPage() {
         />
       </ScrollReveal>
       <ScrollReveal>
+        <Member
+          imageSrc="/members/shigh.jpg"
+          name="shigh"
+          role="トラックメーカー / B3"
+          comment="不器用貧乏です。一緒に文化になろうね！"
+          FavGenre="Ambient, Future, Techno, Houseなど"
+          soundcloudUrl="https://soundcloud.com/shigh-636007604"
+        />
+      </ScrollReveal>
+      <ScrollReveal>
         <Member 
           imageSrc="/members/oruto.webp"
           name="OrutO"
