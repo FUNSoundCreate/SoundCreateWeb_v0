@@ -24,7 +24,7 @@ export default function Member({
   return (
     <div className="flex flex-col md:flex-row justify-start gap-4 md:gap-12 lg:gap-24 max-w-6xl mx-auto px-6 py-16">
       <div className="flex flex-col items-center gap-2 shrink-0 pt-1">
-        <div className="relative w-[200px] h-[200px]">
+        <div className="relative w-50 h-50">
           <Image src={imageSrc} alt={name} fill className="object-cover" />
         </div>
         <div className="flex gap-4 md:self-start pt-2 items-center">
