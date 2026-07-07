@@ -7,8 +7,10 @@ import LinkIcon from "@/components/linkicon";
 import Footer from "@/components/footer";
 import ScrollReveal from "@/components/scroll-reveal";
 import News from "@/components/news";
+import { getAllPosts } from "@/lib/posts";
 
-export default function Home() {
+export default async function Home() {
+  const [latestPost] = await getAllPosts();
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -55,7 +57,7 @@ export default function Home() {
           <Title subtitle="News" title="最新情報" />
         </ScrollReveal>
         <ScrollReveal>
-          <News />
+          <News post={latestPost} />
         </ScrollReveal>
         <ScrollReveal>
           <Title subtitle="Support" title="参加申し込み・問い合わせ" />

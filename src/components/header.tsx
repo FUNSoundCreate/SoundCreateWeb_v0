@@ -27,6 +27,7 @@ export default function Header() {
         <nav className="hidden md:flex gap-12 text-black font-helvetica-lt-pro font-bold">
           <Link href="/member">Member</Link>
           <Link href="/release">Release</Link>
+          <Link href="/news">News</Link>
         </nav>
 
         {/* Hamburger button */}
@@ -56,6 +57,9 @@ export default function Header() {
           </Link>
           <Link href="/release" onClick={() => setIsOpen(false)}>
             Release
+          </Link>
+          <Link href="/news" onClick={() => setIsOpen(false)}>
+            News
           </Link>
         </nav>
       )}
