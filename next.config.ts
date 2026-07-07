@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
   },
 };
 
-const withMDX = createMDX();
+const withMDX = createMDX({
+  options: {
+    // 裸の URL を自動でリンク化（Turbopack 互換のため文字列指定）
+    remarkPlugins: [["remark-gfm", {}]],
+  },
+});
 
 export default withMDX(nextConfig);
