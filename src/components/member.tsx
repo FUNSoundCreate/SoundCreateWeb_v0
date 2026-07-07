@@ -1,26 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiSoundcloud } from "react-icons/si";
+import type { Member as MemberType } from "@/lib/members";
 
 type MemberProps = {
-  imageSrc: string;
-  name: string;
-  role: string;
-  comment: string;
-  FavGenre: string;
-  xUrl?: string;
-  soundcloudUrl?: string;
+  member: MemberType;
 };
 
-export default function Member({
-  imageSrc,
-  name,
-  role,
-  comment,
-  FavGenre,
-  xUrl,
-  soundcloudUrl,
-}: MemberProps) {
+export default function Member({ member }: MemberProps) {
+  const { imageSrc, name, role, comment, favGenre, xUrl, soundcloudUrl } =
+    member;
+
   return (
     <div className="flex flex-col md:flex-row justify-start gap-4 md:gap-12 lg:gap-24 max-w-6xl mx-auto px-6 py-16">
       <div className="flex flex-col items-center gap-2 shrink-0 pt-1">
@@ -75,7 +65,7 @@ export default function Member({
             Favorite Genre
           </p>
           <p className="text-md md:text-lg text-black font-noto-sans-jp">
-            {FavGenre}
+            {favGenre}
           </p>
         </div>
       </div>

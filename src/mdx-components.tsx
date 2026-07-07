@@ -1,6 +1,23 @@
 import type { MDXComponents } from "mdx/types";
+import { Children, isValidElement } from "react";
 import Image, { ImageProps } from "next/image";
 import Link from "next/link";
+import Embed from "@/components/embed";
+import { parseEmbed, type EmbedData } from "@/lib/embed";
+
+// 段落の中身が「単独のリンク」で、その href が X / YouTube なら埋め込み扱いにする。
+function embedFromParagraph(children: React.ReactNode): EmbedData | null {
+  const nodes = Children.toArray(children).filter(
+    (node) => !(typeof node === "string" && node.trim() === ""),
+  );
+  if (nodes.length !== 1) return null;
+
+  const only = nodes[0];
+  if (!isValidElement(only)) return null;
+
+  const href = (only.props as { href?: unknown }).href;
+  return parseEmbed(href);
+}
 
 const components = {
   h2: ({ children }) => (
@@ -13,11 +30,18 @@ const components = {
       {children}
     </h3>
   ),
-  p: ({ children }) => (
-    <p className="text-[16px] font-noto-sans-jp text-black leading-relaxed mb-4">
-      {children}
-    </p>
-  ),
+  p: ({ children }) => {
+    // 単独リンクが X / YouTube の URL なら、段落ではなく埋め込みを描画する。
+    // （<p> の中に <div>/<iframe> を入れると不正な HTML になるため p 自体を差し替える）
+    const embed = embedFromParagraph(children);
+    if (embed) return <Embed data={embed} />;
+
+    return (
+      <p className="text-[16px] font-noto-sans-jp text-black leading-relaxed mb-4">
+        {children}
+      </p>
+    );
+  },
   ul: ({ children }) => (
     <ul className="list-disc pl-6 mb-4 text-[16px] font-noto-sans-jp text-black leading-relaxed">
       {children}

@@ -2,6 +2,12 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Jacket from "@/components/jacket";
 import PageHead from "@/components/pagehead";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Release | SoundCreate Official",
+  description: "SoundCreateのアルバム・EP",
+};
 
 export default function Release() {
   return (

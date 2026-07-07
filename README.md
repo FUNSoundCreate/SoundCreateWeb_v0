@@ -30,7 +30,7 @@ The site introduces our members, showcases released compilation albums, and prov
 
 ## Getting Started
 
-**Prerequisites:** Node.js 18+
+**Prerequisites:** Node.js 18+ and [pnpm](https://pnpm.io/)
 
 ```bash
 # Clone
@@ -38,10 +38,10 @@ git clone https://github.com/FUNSoundCreate/SoundCreateWeb_v0.git
 cd soundcreateweb-v0
 
 # Install dependencies
-npm install
+pnpm install
 
 # Start dev server
-npm run dev
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
@@ -49,9 +49,9 @@ Open [http://localhost:3000](http://localhost:3000).
 ### Other commands
 
 ```bash
-npm run build   # Production build
-npm start       # Run production build
-npm run lint    # Lint
+pnpm build   # Production build
+pnpm start   # Run production build
+pnpm lint    # Lint
 ```
 
 ---

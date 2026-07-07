@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AuthorBadge from "@/components/author-badge";
 import type { PostMeta } from "@/lib/posts";
 
 type NewsProps = {
@@ -21,6 +22,11 @@ export default function News({ post }: NewsProps) {
         <p className="text-[16px] font-noto-sans-jp text-black leading-relaxed">
           {post.description}
         </p>
+        {post.author && (
+          <div className="pt-1">
+            <AuthorBadge author={post.author} />
+          </div>
+        )}
         <Link
           href="/news"
           className="inline-flex items-center self-start px-4 py-2 bg-violet-600 text-[16px] font-helvetica-lt-pro text-white font-bold"
@@ -30,7 +36,7 @@ export default function News({ post }: NewsProps) {
         </Link>
       </div>
       <div className="relative w-full sm:flex-1 px-4 sm:px-0">
-        <Link href={`/news/${post.slug}`} className="block relative aspect-16/5 overflow-hidden">
+        <Link href={`/news/${post.slug}`} className="block relative aspect-21/9 overflow-hidden">
           <Image
             src={post.thumbnail ?? "/sqstripe.svg"}
             alt={post.title}

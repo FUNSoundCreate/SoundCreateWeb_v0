@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import PageHead from "@/components/pagehead";
-import { getAllPosts, type PostMeta } from "@/lib/posts";
+import AuthorBadge from "@/components/author-badge";
+import { getAllPosts, getPost } from "@/lib/posts";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -11,10 +13,7 @@ type Props = {
 
 export default async function Post({ params }: Props) {
   const { slug } = await params;
-  const { default: Content, metadata } = await import(
-    `@/content/news/${slug}.mdx`
-  );
-  const meta = metadata as PostMeta;
+  const { Content, meta } = await getPost(slug);
 
   return (
     <div className="min-h-screen bg-white">
@@ -26,9 +25,24 @@ export default async function Post({ params }: Props) {
         subtitle="News"
       />
       <main className="max-w-3xl mx-auto px-8 pb-24">
-        <p className="text-[16px] font-bold font-helvetica-lt-pro text-violet-600 mb-8">
-          {meta.date.replaceAll("-", ".")}
-        </p>
+        {meta.thumbnail && (
+          <div className="relative aspect-21/9 overflow-hidden rounded-lg mb-8">
+            <Image
+              src={meta.thumbnail}
+              alt={meta.title}
+              fill
+              sizes="(min-width: 768px) 768px, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
+        <div className="flex flex-col items-start gap-3 mb-8">
+          <p className="text-[16px] font-bold font-helvetica-lt-pro text-violet-600">
+            {meta.date.replaceAll("-", ".")}
+          </p>
+          {meta.author && <AuthorBadge author={meta.author} size="md" />}
+        </div>
         <article>
           <Content />
         </article>
@@ -53,10 +67,10 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const { metadata } = await import(`@/content/news/${slug}.mdx`);
+  const { meta } = await getPost(slug);
   return {
-    title: `${metadata.title} | SoundCreate Official`,
-    description: metadata.description,
+    title: `${meta.title} | SoundCreate Official`,
+    description: meta.description,
   };
 }
 
