@@ -12,7 +12,7 @@ export default function Hero() {
             <motion.img
               src="/downarrow.svg"
               alt="down arrow"
-              className="h-[15px] w-[15px] sm:h-[20px] sm:w-[20px] lg:h-[25px] lg:w-[25px]"
+              className="h-3.75 w-3.75 sm:h-5 sm:w-5 lg:h-6.25 lg:w-6.25"
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1, 0, 1, 0, 1, 0, 1] }}
               transition={{
@@ -48,7 +48,7 @@ export default function Hero() {
             <motion.img
               src="/stripes.svg"
               alt="stripes"
-              className="h-[15px] w-[39px] sm:h-[20px] sm:w-[52px] lg:h-[25px] lg:w-[65px]"
+              className="h-3.75 w-9.75 sm:h-5 sm:w-13 lg:h-6.25 lg:w-16.25"
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1, 0, 1, 0, 1, 0, 1] }}
               transition={{
