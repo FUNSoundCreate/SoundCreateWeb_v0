@@ -63,6 +63,16 @@ export const members: Member[] = [
     soundcloudUrl: "https://on.soundcloud.com/gf63EMjpMY2joxvvYx",
   },
   {
+    id: "kpia",
+    name: "Kpia",
+    imageSrc: "/members/kpia.jpg",
+    role: "トラックメーカー / B4",
+    comment: "オーケストラからバンドサウンド、電子音楽まで幅広いジャンルに精通している。デカいポップを作っている。",
+    favGenre: "Hyperpop, Electro Pop, J-Pop, Jazz, Acoustic",
+    xUrl: "https://x.com/takt_min",
+    soundcloudUrl: "https://soundcloud.com/popkpia",
+  },
+  {
     id: "invader",
     name: "侵略者",
     imageSrc: "/members/inv.png",
