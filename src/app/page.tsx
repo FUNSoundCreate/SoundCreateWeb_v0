@@ -75,6 +75,11 @@ export default async function Home() {
               imgsrc="/djlogosmbk.png"
               alt="FUNDJCircle"
             />
+            <LinkIcon
+              href="https://x.com/FUNVC39"
+              imgsrc="/funvc_miku_2026_icon.png"
+              alt="FUNVC"
+            />
           </div>
         </ScrollReveal>
       </main>
